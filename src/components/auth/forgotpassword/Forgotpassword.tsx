@@ -53,7 +53,7 @@ const CreateAccount = () => {
                 &lt; Back to Sign in
               </Text>
 
-              <Button type="submit" color="green"   w="50%" radius={10}>
+              <Button type="submit" color="green"   w="50%" radius={10} component="a" href="/forgotpassword/checkemail">
                 Continue
               </Button>
             </Flex>

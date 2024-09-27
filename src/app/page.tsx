@@ -1,10 +1,10 @@
-import CreateAccount from "@/app/(auth)/createaccount/page";
+// import CreateAccount from "@/app/(auth)/createaccount/page";
 import React from "react";
-
+import Product from "@/components/product/sidebar/Sidebar"
 const page = () => {
   return (
     <div>
-      <CreateAccount />
+      <Product/>
     </div>
   );
 };
