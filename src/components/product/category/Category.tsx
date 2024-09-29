@@ -14,16 +14,20 @@ import {
   Divider,
   Table,
   Checkbox,
+  Menu,
 } from "@mantine/core";
 import { Dropzone } from "@mantine/dropzone";
 import Image from "next/image";
-import pic from "@/components/assets/images/Frame 1321315150.png";
+import pic from "@/components/assets/images/category.png";
 import style from "../category/Category.module.css";
 import { useDisclosure } from "@mantine/hooks";
 import {
+  IconChevronDown,
   IconDotsVertical,
+  IconEye,
   IconPhoto,
   IconSearch,
+  IconTrash,
   IconX,
 } from "@tabler/icons-react";
 import { useRef } from "react";
@@ -52,7 +56,18 @@ const Category = () => {
       </Table.Td>
       <Table.Td>{element.total}</Table.Td>
       <Table.Td>
-        <IconDotsVertical />
+        <Menu>
+          <Menu.Target>
+            <IconDotsVertical />
+          </Menu.Target>
+
+          <Menu.Dropdown>
+            <Menu.Item leftSection={<IconEye />}>View</Menu.Item>
+            <Menu.Item color="red" leftSection={<IconTrash />}>
+              Delete
+            </Menu.Item>
+          </Menu.Dropdown>
+        </Menu>
       </Table.Td>
     </Table.Tr>
   ));
@@ -102,6 +117,7 @@ const Category = () => {
                 <IconX stroke={2.5} />
               </ActionIcon>
             </Flex>
+
             <Box>
               <form className={style.form}>
                 <Text className={style.textform}>
@@ -158,7 +174,21 @@ const Category = () => {
               <Text>Making it Easy for EMployees to Manage Products</Text>
             </Box>
             <Group>
-              <Button>Export</Button>
+              <Menu>
+                <Menu.Target>
+                  <Button
+                    rightSection={<IconChevronDown />}
+                    className={style.export}
+                  >
+                    Export
+                  </Button>
+                </Menu.Target>
+
+                <Menu.Dropdown>
+                  <Menu.Item fw={400}>Download as CSV</Menu.Item>
+                  <Menu.Item fw={400}>Download as PDF</Menu.Item>
+                </Menu.Dropdown>
+              </Menu>
               <Button w={148} h={40} color="#24BE67" onClick={open}>
                 Add Category
               </Button>
