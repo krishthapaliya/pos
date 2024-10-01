@@ -1,0 +1,65 @@
+.staffimg {
+  width: 140px;
+  height: 140px;
+}
+
+.drawerMain {
+  margin-top: 32px;
+  margin-left: 24px;
+  gap: 0px;
+}
+
+.form {
+  margin-top: 36px;
+  margin-left: 24px;
+  gap: 20px;
+  opacity: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 87vh;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+
+.buttons {
+  padding: 16px 32px 24px 32px;
+  gap: 0px;
+  display: flex;
+  border: 1px 0px 0px 0px;
+}
+.cancel {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  width: 140px;
+  border-radius: 8px;
+}
+.save {
+  background-color: #24be67;
+  width: 140px;
+  border-radius: 8px;
+}
+
+.flex {
+    position: absolute;
+    top:20%
+}
+.mainHead{
+    margin: 20px;
+}
+.modal {
+    height: 232px;
+    width: 460px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+}

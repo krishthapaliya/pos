@@ -5,13 +5,13 @@ import {
   Button,
   Box,
   Title,
-  Text
+  Text,
+  Flex,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import Image from "next/image";
 import logo from "@/components/assets/logo/Logo.png";
 import styles from "@/components/auth/createaccount/Createaccount.module.css";
-
 
 const CreateAccount = () => {
   const form = useForm({
@@ -34,7 +34,12 @@ const CreateAccount = () => {
   };
 
   return (
-    <Box className={styles.main}>
+    <Flex
+      align="center"
+      justify="center"
+      className={styles.main}
+      h="calc(100vh)"
+    >
       <Box className={styles.box1}>
         <Box className={styles.image}>
           <Image src={logo} width={60} alt="logo" />
@@ -53,7 +58,7 @@ const CreateAccount = () => {
             <TextInput
               className={styles.input}
               label="Business Name"
-              size="md" 
+              size="md"
               placeholder="Enter your business name"
               {...form.getInputProps("businessName")}
               required
@@ -78,9 +83,18 @@ const CreateAccount = () => {
             />
 
             <Checkbox
-              label={<>By creating an account or signing you agree to our <span style={{ textDecoration: "underline", cursor: "pointer" }}> Terms and Conditions </span> </>}
+              label={
+                <>
+                  By creating an account or signing you agree to our{" "}
+                  <span
+                    style={{ textDecoration: "underline", cursor: "pointer" }}
+                  >
+                    {" "}
+                    Terms and Conditions{" "}
+                  </span>{" "}
+                </>
+              }
               size="md"
-              
               {...form.getInputProps("terms", { type: "checkbox" })}
               required
             />
@@ -92,14 +106,19 @@ const CreateAccount = () => {
 
           <Text>
             Already have an account?{" "}
-        
-            <Text component="a" size="lg" td='underline' href="/signin" color="green">
+            <Text
+              component="a"
+              size="lg"
+              td="underline"
+              href="/signin"
+              color="green"
+            >
               Sign in
             </Text>
           </Text>
         </Box>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

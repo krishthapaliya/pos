@@ -1,0 +1,65 @@
+.head{
+    font-weight: 600;
+    font-size: 24px;
+}
+.flex {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   width: 394px;
+   Height: 316px;
+}
+.unitimg {
+    width: 140px ;
+    height: 140px ;
+}
+.Action {
+    background-color: #f6ffed;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #24be67;
+  }
+  .label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .section {
+    border:1px solid #d9d9d9;
+    border-radius: 4PX;
+  }
+  .table {
+    table-layout:fixed;
+    width: 100%;
+  }
+
+  .cancel {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    width: 140px;
+    border-radius: 8px;
+  }
+  .save {
+    background-color: #24be67;
+    width: 140px;
+    border-radius: 8px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0%;
+    height: 80px;
+    width: 100%;
+    border-top: 1px solid;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .mainHead{
+    height: 100vh;
+  }

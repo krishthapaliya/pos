@@ -7,11 +7,11 @@
   justify-content: center;
   flex-direction: column;
   gap: 40px;
-  margin: auto; 
-  position: absolute; 
+  /* margin: auto;  */
+  /* position: absolute; 
   top: 50%; 
   left: 50%; 
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);  */
 }
 .box2 {
   height: screen;
